@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dosen Keren Elektronika</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="judul">
+    <h1 class="judul-atas">DOSEN KEREN</h1>
+    <h2 class="judul-bawah">Elektronika</h2>
+  </header>
+
+  <section class="dosen-container">
+    <!-- Card 1 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/dosen/1.png" alt="Dosen 1">
+      </div>
+      <div class="dosen-name">Dadi , S.T., M.Eng.</div>
+      <div class="dosen-nip">NIP : 196206101986031004</div>
+      <button class="btn-bertemu">Ingin Bertemu</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/dosen/2.png" alt="Dosen 2">
+      </div>
+      <div class="dosen-name">Bambang Supriyo, BSEE., MEngSc, PhD.</div>
+      <div class="dosen-nip">NIP : 196307071992031005</div>
+      <button class="btn-bertemu">Ingin Bertemu</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/dosen/3.png" alt="Dosen 3">
+      </div>
+      <div class="dosen-name">Muhammad Cahyo Ardi Prabowo, S.T., M.Tr.T.</div>
+      <div class="dosen-nip">NIP : 199510312022031004</div>
+      <button class="btn-bertemu">Ingin Bertemu</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/dosen/4.png" alt="Dosen 4">
+      </div>
+      <div class="dosen-name">Raditya Artha Rochmanto, S.T., M.T.</div>
+      <div class="dosen-nip">NIP : 199012202022031009</div>
+      <button class="btn-bertemu">Ingin Bertemu</button>
+    </div>
+  </section>
+  <!-- Theme Switcher -->
+<div class="theme-switcher">
+  <button class="theme-toggle">🎨</button>
+  <div class="theme-options">
+    <div class="theme-option" data-theme="default" style="background: #f6f5f0; border: 2px solid #2c596c;"></div>
+    <div class="theme-option" data-theme="blue" style="background: #e6f0f5; border: 2px solid #1a4b63;"></div>
+    <div class="theme-option" data-theme="green" style="background: #f0f5e6; border: 2px solid #3a5c46;"></div>
+    <div class="theme-option" data-theme="sand" style="background: #f5efe6; border: 2px solid #5c4a3a;"></div>
+    <div class="theme-option" data-theme="dark" style="background: #1a1a2e; border: 2px solid #4cc9f0;"></div>
+  </div>
+</div>
+
+<div class="sidebar-trigger" onclick="window.location.href='credits.html'">
+  <div class="vertical-line"></div>
+  <span class="sidebar-text"></span>
+</div>
+
+<!-- Tambahkan di sebelum </body> -->
+<div id="meetingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Atur Pertemuan</h3>
+    <div class="user-type">
+      <button class="btn-dosen">Saya Dosen</button>
+      <button class="btn-mahasiswa">Saya Mahasiswa</button>
+    </div>
+    
+<!-- Form Dosen -->
+<div id="dosenForm" class="form-container hidden">
+  <input type="text" id="namaDosenInput" placeholder="Nama Lengkap Dosen">
+  <button id="confirmDosen">Request Pertemuan Prioritas</button>
+</div>
+
+<!-- Form Mahasiswa -->
+<div id="mahasiswaForm" class="form-container hidden">
+  <input type="text" id="namaMahasiswa" placeholder="Nama Lengkap">
+  <input type="text" id="nimMahasiswa" placeholder="NIM">
+  <button id="requestMeeting">Request Pertemuan</button>
+</div>
+    
+    <!-- Status Hardware (LED Indicator) -->
+    <div class="hardware-status">
+      <div class="led" id="statusLed"></div>
+      <span id="statusText">Status: Tersedia</span>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Akhir Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@900&display=swap" rel="stylesheet">
+</head>
+<body class="default">
+  <!-- Left Sidebar (Replacement for back button) -->
+  <div class="left-sidebar" onclick="window.location.href='index.html'">
+    <!-- <div class="vertical-line"></div>
+    <span class="sidebar-text"></span> -->
+  </div>
+
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <button class="theme-toggle">🎨</button>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="default" style="background: #f6f5f0; border: 2px solid #2c596c;"></div>
+      <div class="theme-option" data-theme="blue" style="background: #e6f0f5; border: 2px solid #1a4b63;"></div>
+      <div class="theme-option" data-theme="green" style="background: #f0f5e6; border: 2px solid #3a5c46;"></div>
+      <div class="theme-option" data-theme="dark" style="background: #1a1a2e; border: 2px solid #4cc9f0;"></div>
+    </div>
+  </div>
+
+  <header class="judul">
+    <h1 class="judul-atas">Tugas Akhir</h1>
+    <h2 class="judul-bawah">Mahasiswa</h2>
+  </header>
+
+  <section class="dosen-container">
+    <!-- Card Pembuat 1 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/creators/1.png" alt="Arya Laksmana Dewanata">
+      </div>
+      <div class="dosen-name">Arya Laksmana Dewanata</div>
+      <div class="dosen-nip">NIM: 4.34.22.1.05</div>
+      <button class="btn-bertemu">@arlaksde</button>
+    </div>
+
+    <!-- Card Pembuat 2 -->
+    <div class="dosen-card">
+      <div class="dosen-photo">
+        <img src="images/creators/2.png" alt="Riffatunnisa Fauziah Hanum">
+      </div>
+      <div class="dosen-name">Riffatunnisa Fauziah Hanum</div>
+      <div class="dosen-nip">NIM: 4.34.22.1.21</div>
+      <button class="btn-bertemu">@rfzhanum_</button>
+    </div>
+  </section>
+
+  <script>
+    // Theme Switcher Script
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.querySelector('.theme-toggle');
+      const themeOptions = document.querySelector('.theme-options');
+      const themeButtons = document.querySelectorAll('.theme-option');
+      
+      themeToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        themeOptions.classList.toggle('show');
+      });
+      
+      themeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const theme = this.getAttribute('data-theme');
+          document.body.className = theme;
+          themeOptions.classList.remove('show');
+        });
+      });
+
+      document.addEventListener('click', function() {
+        themeOptions.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
